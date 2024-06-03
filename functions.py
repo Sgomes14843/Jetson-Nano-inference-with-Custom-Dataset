@@ -68,7 +68,7 @@ def predict_video(net_type, model_path, label_path, video_file, output_path, siz
     height = int(cap.get(4))
     fps2 = cap.get(cv2.CAP_PROP_FPS)
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')
-    out = cv2.VideoWriter('output.mp4',fourcc, fps2, (width,height))
+    out = cv2.VideoWriter(output_path,fourcc, fps2, (width,height))
 
     while True:
         ret, orig_image = cap.read()
